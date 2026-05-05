@@ -1,0 +1,226 @@
+/* * {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: skyblue;
+}
+
+.app {
+    background: #fff;
+    width: 90%;
+    max-width: 600px;
+    margin: 100px auto 0;
+    padding: 30px;
+}
+
+.app h1 {
+    font-weight: 25px;
+    color: #001e4d;
+    font-weight: 600;
+    border-bottom: 1px solid #333;
+    padding-bottom: 30px;
+}
+
+.quiz {
+    padding: 20px 0;
+}
+
+.quiz h2 {
+    font-size: 18px;
+    color: #001e4d;
+    font-weight: 600;
+}
+
+.btn {
+    background: #fff;
+    color: #222;
+    font-weight: 500;
+    width: 100%;
+    border: 1px solid #222;
+    padding: 10px;
+    margin: 10px 0;
+    text-align: left;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn:hover:not([disabled]) {
+    background: #222;
+    color: #fff;
+}
+
+.btn:disabled {
+    cursor: no-drop;
+}
+
+#next-btn {
+    background: #001e4d;
+    color: #fff;
+    font-weight: 500;
+    width: 150px;
+    border: 0;
+    padding: 10px;
+    margin: 20px auto 0;
+    border-radius: 4px;
+    cursor: pointer;
+    display: none;
+} */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: skyblue;
+    /* Adicionado Flexbox para centralizar o conteúdo vertical e horizontalmente */
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center;   /* Centraliza verticalmente */
+    min-height: 100vh;     /* Garante que o body ocupe toda a altura da viewport */
+    padding: 20px;         /* Adiciona um padding geral para não colar nas bordas em telas pequenas */
+    overflow-y: auto;      /* Permite rolagem se o conteúdo for maior que a tela */
+}
+
+.app {
+    background: #fff;
+    width: 90%;
+    max-width: 600px;
+    /* Removido 'margin: 100px auto 0;' pois o flexbox do body já centraliza */
+    padding: 30px;
+    border-radius: 10px; /* Borda mais arredondada para um visual moderno */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra mais suave */
+}
+
+.app h1 {
+    font-size: 26px; /* Aumentado um pouco para melhor legibilidade no título */
+    color: #001e4d;
+    font-weight: 600;
+    border-bottom: 1px solid #333;
+    padding-bottom: 20px; /* Ajustado o padding para um visual mais equilibrado */
+    margin-bottom: 25px; /* Adicionado um espaço abaixo do título */
+    text-align: center; /* Centraliza o título */
+}
+
+.quiz {
+    padding: 0; /* Removido padding, pois o padding do .app já é suficiente */
+}
+
+.quiz h2 {
+    font-size: 1.1em; /* Usando em para flexibilidade, ajuste para 1.2em se preferir maior */
+    color: #001e4d;
+    font-weight: 600;
+    margin-bottom: 20px; /* Espaço abaixo da pergunta */
+    line-height: 1.4;    /* Melhora a legibilidade de textos longos */
+    text-align: center; /* Centraliza a pergunta */
+}
+
+.btn {
+    background: #f0f0f0; /* Um fundo mais suave para os botões */
+    color: #222;
+    font-weight: 500;
+    width: 100%;
+    border: 1px solid #bbb; /* Borda mais clara */
+    padding: 12px 15px; /* Padding um pouco maior para toque fácil em celulares */
+    margin: 8px 0; /* Espaço entre os botões */
+    text-align: left;
+    border-radius: 8px; /* Borda mais arredondada */
+    cursor: pointer;
+    transition: all 0.3s ease; /* Transição mais suave */
+    font-size: 1em; /* Tamanho da fonte responsivo */
+    word-wrap: break-word; /* Garante que o texto longo não transborde */
+    white-space: normal; /* Permite que o texto quebre linhas */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Sombra leve para profundidade */
+}
+
+.btn:hover:not([disabled]) {
+    background: #0056b3; /* Cor mais escura ao passar o mouse/tocar */
+    color: #fff;
+    border-color: #0056b3;
+}
+
+.btn:disabled {
+    background-color: #e0e0e0; /* Cor de fundo quando desabilitado */
+    color: #888;
+    cursor: not-allowed;
+}
+
+/* Estilo para o botão selecionado, adicionado via JS */
+.btn.selected {
+    background-color: #28a745; /* Verde vibrante para o selecionado */
+    color: #fff;
+    border-color: #28a745;
+}
+
+#next-btn {
+    background: #007bff; /* Azul padrão para o botão "Próxima" */
+    color: #fff;
+    font-weight: 500;
+    width: 180px; /* Aumentado para melhor toque em celulares */
+    border: 0;
+    padding: 12px 20px; /* Padding ajustado */
+    margin: 30px auto 0; /* Mais espaço acima do botão */
+    border-radius: 6px;
+    cursor: pointer;
+    display: block; /* Garante que o botão apareça como bloco para centralização */
+    transition: background-color 0.3s ease;
+    font-size: 1.1em; /* Fonte um pouco maior */
+}
+
+#next-btn:hover {
+    background: #0056b3; /* Cor mais escura ao passar o mouse/tocar */
+}
+
+/* --- Media Queries para Telas Menores --- */
+@media (max-width: 600px) {
+    .app {
+        padding: 20px; /* Menor padding em telas muito pequenas */
+    }
+    .app h1 {
+        font-size: 22px; /* Ajusta o tamanho do título */
+        padding-bottom: 15px;
+        margin-bottom: 20px;
+    }
+    .quiz h2 {
+        font-size: 1em; /* Ajusta o tamanho da pergunta */
+        margin-bottom: 15px;
+    }
+    .btn {
+        padding: 10px 12px; /* Menor padding para botões */
+        font-size: 0.95em; /* Fonte ligeiramente menor */
+    }
+    #next-btn {
+        width: 100%; /* Botão "Próxima" ocupa toda a largura em telas pequenas */
+        font-size: 1em;
+        padding: 10px 15px;
+        margin-top: 20px;
+    }
+}
+
+/* --- Media Queries para Telas Super Pequenas (ex: iPhone SE) --- */
+@media (max-width: 360px) {
+    .app {
+        margin: 10px; /* Menor margem geral */
+        padding: 15px;
+    }
+    .app h1 {
+        font-size: 20px;
+    }
+    .quiz h2 {
+        font-size: 0.95em;
+    }
+    .btn {
+        font-size: 0.9em;
+        padding: 8px 10px;
+    }
+    #next-btn {
+        padding: 8px 12px;
+    }
+}
