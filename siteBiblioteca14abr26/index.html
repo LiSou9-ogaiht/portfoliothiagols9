@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca Popular</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="banner-principal">
+        <div class="overlay-acessivel">
+            <h1>Biblioteca Popular</h1>
+            <p>O saber ao alcance de todos.</p>
+
+            <input type="text" id="searchBar" placeholder="Buscar livros...">
+
+            <!-- Filtro por categoria -->
+            <select id="categoryFilter">
+                <option value="todos">Todas Categorias</option>
+                <option value="romance">Romance</option>
+                <option value="ficcao">Ficção</option>
+                <option value="classico">Clássico</option>
+                <option value="poesia">Poesia</option>
+            </select>
+
+            <!-- Modo escuro -->
+            <button id="toggleDark">🌙 Modo Escuro</button>
+        </div>
+    </div>
+</header>
+
+<main>
+    <h2 class="titulo-sessao">Nosso Acervo</h2>
+
+    <!-- Carrossel -->
+    <div class="carrossel-container">
+        <button id="prev">❮</button>
+
+        <section class="lista-de-livros" id="bookList">
+
+            <!-- LIVROS (12) -->
+
+            <article class="cartao-livro" data-categoria="classico">
+                <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f" alt="">
+                <h3>Dom Casmurro</h3>
+                <p>Machado de Assis</p>
+                <button class="status disponivel">Disponível</button>
+            </article>
+
+            <article class="cartao-livro" data-categoria="ficcao">
+                <img src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73" alt="">
+                <h3>O Alquimista</h3>
+                <p>Paulo Coelho</p>
+                <button class="status emprestado">Emprestado</button>
+            </article>
+
+            <article class="cartao-livro" data-categoria="classico">
+                <img src="https://images.unsplash.com/photo-1495446815901-a7297e633e8d" alt="">
+                <h3>Memórias Póstumas</h3>
+                <p>Machado de Assis</p>
+                <button class="status disponivel">Disponível</button>
+            </article>
+
+            <article class="cartao-livro" data-categoria="romance">
+                <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794" alt="">
+                <h3>Capitães da Areia</h3>
+                <p>Jorge Amado</p>
+                <button class="status emprestado">Emprestado</button>
+            </article>
+
+            <article class="cartao-livro" data-categoria="classico">
+                <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f" alt="">
+                <h3>Os Lusíadas</h3>
+                <p>Luís de Camões</p>
+                <button class="status disponivel">Disponível</button>
+            </article>
+
+            <article class="cartao-livro" data-categoria="romance">
+                <img src="https://images.unsplash.com/photo-1509021436665-8f07dbf5bf1d" alt="">
+                <h3>Amor de Perdição</h3>
+                <p>Camilo Castelo Branco</p>
+                <button class="status emprestado">Emprestado</button>
+            </article>
+
+            <article class="cartao-livro" data-categoria="ficcao">
+                <img src="https://images.unsplash.com/photo-1473755504818-b72b6dfdc226" alt="">
+                <h3>Ensaio sobre a Cegueira</h3>
+                <p>José Saramago</p>
+                <button class="status disponivel">Disponível</button>
+            </article>
+
+            <article class="cartao-livro" data-categoria="romance">
+                <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba" alt="">
+                <h3>A Hora da Estrela</h3>
+                <p>Clarice Lispector</p>
+                <button class="status emprestado">Emprestado</button>
+            </article>
+
+            <article class="cartao-livro" data-categoria="classico">
+                <img src="https://images.unsplash.com/photo-1516979187457-637abb4f9353" alt="">
+                <h3>Iracema</h3>
+                <p>José de Alencar</p>
+                <button class="status disponivel">Disponível</button>
+            </article>
+
+            <article class="cartao-livro" data-categoria="poesia">
+                <img src="https://images.unsplash.com/photo-1455885661740-29cbf08a42fa" alt="">
+                <h3>Mensagem</h3>
+                <p>Fernando Pessoa</p>
+                <button class="status emprestado">Emprestado</button>
+            </article>
+
+            <article class="cartao-livro" data-categoria="romance">
+                <img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66" alt="">
+                <h3>O Primo Basílio</h3>
+                <p>Eça de Queirós</p>
+                <button class="status disponivel">Disponível</button>
+            </article>
+
+            <article class="cartao-livro" data-categoria="ficcao">
+                <img src="https://images.unsplash.com/photo-1528207776546-365bb710ee93" alt="">
+                <h3>Mayombe</h3>
+                <p>Pepetela</p>
+                <button class="status emprestado">Emprestado</button>
+            </article>
+
+        </section>
+
+        <button id="next">❯</button>
+    </div>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
