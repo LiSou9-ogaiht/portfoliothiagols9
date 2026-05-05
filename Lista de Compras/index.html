@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lista de Compras</title>
+        <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+    </head>
+    <body>
+        <h1>Lista de Compras</h1>
+
+        <form onsubmit="return false">
+            <div>
+                <label for="artigo">Artigo:</label>
+                <input type="text" id="artigo" />
+            </div>
+            <div>
+                <label for="qtd">Quantidade:</label>
+                <input type="text" id="qtd" />
+            </div>
+            <div>
+                <input type="button" value="Inserir Artigo" />
+            </div>
+
+            <div id="listas">
+              <div id="lista-on">
+                <h4>Lista</h4>
+                <ul></ul>
+            </div>
+              <div id="lista-off">
+                <h4>Itens Adicionados ao Carrinho</h4>
+                <ul></ul>
+              </div>  
+            </div>
+
+            <script src="app.js"></script>
+        </form>
+    </body>
+</html>

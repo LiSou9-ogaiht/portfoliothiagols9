@@ -1,0 +1,20 @@
+ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+ul li {
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+ul li:hover {
+    padding-left: 50px;
+    background-color: #ccc;
+    transition: 0.5s;
+}
+
+#lista-off ul li {
+    color: #999;
+    text-decoration: line-through;
+}
